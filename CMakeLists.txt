@@ -7,6 +7,8 @@ project(DXFRW VERSION 1.0.1)
 set(LIBDXFRW_BUILD_DOC TRUE CACHE BOOL "Build the documentation")
 set(LIBDXFRW_BUILD_DWG2DXF TRUE CACHE BOOL "Build the dwg2dxf application")
 
+# Produce json file for neovim clangd completion
+set (CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
 # set compiler warnings
 if (MSVC)
@@ -108,6 +110,8 @@ endif()
 if(LIBDXFRW_BUILD_DWG2DXF)
     add_subdirectory(dwg2dxf)
 endif()
+
+add_subdirectory(dxfinfo)
 
 # INSTALLATION
 set(INSTALL_CONFIGDIR ${CMAKE_INSTALL_LIBDIR}/cmake/libdxfrw)

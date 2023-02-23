@@ -53,6 +53,7 @@ build
 debug
 release
 cmake-build-*
+.cache
 
 # Visual Studio
 .vs/
