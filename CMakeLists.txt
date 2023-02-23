@@ -111,7 +111,7 @@ if(LIBDXFRW_BUILD_DWG2DXF)
     add_subdirectory(dwg2dxf)
 endif()
 
-add_subdirectory(dxfinfo)
+# add_subdirectory(dxfinfo)
 
 # INSTALLATION
 set(INSTALL_CONFIGDIR ${CMAKE_INSTALL_LIBDIR}/cmake/libdxfrw)
